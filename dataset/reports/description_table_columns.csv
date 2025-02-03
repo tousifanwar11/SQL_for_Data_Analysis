@@ -1,0 +1,129 @@
+"table_name","column_name","data_type","is_nullable","character_maximum_length","numeric_precision","ordinal_position"
+"actor","actor_id","integer","NO",NULL,32,1
+"actor","first_name","character varying","NO",45,NULL,2
+"actor","last_name","character varying","NO",45,NULL,3
+"actor","last_update","timestamp without time zone","NO",NULL,NULL,4
+"actor_info","actor_id","integer","YES",NULL,32,1
+"actor_info","first_name","character varying","YES",45,NULL,2
+"actor_info","last_name","character varying","YES",45,NULL,3
+"actor_info","film_info","text","YES",NULL,NULL,4
+"address","address_id","integer","NO",NULL,32,1
+"address","address","character varying","NO",50,NULL,2
+"address","address2","character varying","YES",50,NULL,3
+"address","district","character varying","NO",20,NULL,4
+"address","city_id","smallint","NO",NULL,16,5
+"address","postal_code","character varying","YES",10,NULL,6
+"address","phone","character varying","NO",20,NULL,7
+"address","last_update","timestamp without time zone","NO",NULL,NULL,8
+"category","category_id","integer","NO",NULL,32,1
+"category","name","character varying","NO",25,NULL,2
+"category","last_update","timestamp without time zone","NO",NULL,NULL,3
+"city","city_id","integer","NO",NULL,32,1
+"city","city","character varying","NO",50,NULL,2
+"city","country_id","smallint","NO",NULL,16,3
+"city","last_update","timestamp without time zone","NO",NULL,NULL,4
+"country","country_id","integer","NO",NULL,32,1
+"country","country","character varying","NO",50,NULL,2
+"country","last_update","timestamp without time zone","NO",NULL,NULL,3
+"customer","customer_id","integer","NO",NULL,32,1
+"customer","store_id","smallint","NO",NULL,16,2
+"customer","first_name","character varying","NO",45,NULL,3
+"customer","last_name","character varying","NO",45,NULL,4
+"customer","email","character varying","YES",50,NULL,5
+"customer","address_id","smallint","NO",NULL,16,6
+"customer","activebool","boolean","NO",NULL,NULL,7
+"customer","create_date","date","NO",NULL,NULL,8
+"customer","last_update","timestamp without time zone","YES",NULL,NULL,9
+"customer","active","integer","YES",NULL,32,10
+"customer_list","id","integer","YES",NULL,32,1
+"customer_list","name","text","YES",NULL,NULL,2
+"customer_list","address","character varying","YES",50,NULL,3
+"customer_list","zip code","character varying","YES",10,NULL,4
+"customer_list","phone","character varying","YES",20,NULL,5
+"customer_list","city","character varying","YES",50,NULL,6
+"customer_list","country","character varying","YES",50,NULL,7
+"customer_list","notes","text","YES",NULL,NULL,8
+"customer_list","sid","smallint","YES",NULL,16,9
+"film","film_id","integer","NO",NULL,32,1
+"film","title","character varying","NO",255,NULL,2
+"film","description","text","YES",NULL,NULL,3
+"film","release_year","integer","YES",NULL,32,4
+"film","language_id","smallint","NO",NULL,16,5
+"film","rental_duration","smallint","NO",NULL,16,6
+"film","rental_rate","numeric","NO",NULL,4,7
+"film","length","smallint","YES",NULL,16,8
+"film","replacement_cost","numeric","NO",NULL,5,9
+"film","rating","USER-DEFINED","YES",NULL,NULL,10
+"film","last_update","timestamp without time zone","NO",NULL,NULL,11
+"film","special_features","ARRAY","YES",NULL,NULL,12
+"film","fulltext","tsvector","NO",NULL,NULL,13
+"film_actor","actor_id","smallint","NO",NULL,16,1
+"film_actor","film_id","smallint","NO",NULL,16,2
+"film_actor","last_update","timestamp without time zone","NO",NULL,NULL,3
+"film_category","film_id","smallint","NO",NULL,16,1
+"film_category","category_id","smallint","NO",NULL,16,2
+"film_category","last_update","timestamp without time zone","NO",NULL,NULL,3
+"film_list","fid","integer","YES",NULL,32,1
+"film_list","title","character varying","YES",255,NULL,2
+"film_list","description","text","YES",NULL,NULL,3
+"film_list","category","character varying","YES",25,NULL,4
+"film_list","price","numeric","YES",NULL,4,5
+"film_list","length","smallint","YES",NULL,16,6
+"film_list","rating","USER-DEFINED","YES",NULL,NULL,7
+"film_list","actors","text","YES",NULL,NULL,8
+"inventory","inventory_id","integer","NO",NULL,32,1
+"inventory","film_id","smallint","NO",NULL,16,2
+"inventory","store_id","smallint","NO",NULL,16,3
+"inventory","last_update","timestamp without time zone","NO",NULL,NULL,4
+"language","language_id","integer","NO",NULL,32,1
+"language","name","character","NO",20,NULL,2
+"language","last_update","timestamp without time zone","NO",NULL,NULL,3
+"nicer_but_slower_film_list","fid","integer","YES",NULL,32,1
+"nicer_but_slower_film_list","title","character varying","YES",255,NULL,2
+"nicer_but_slower_film_list","description","text","YES",NULL,NULL,3
+"nicer_but_slower_film_list","category","character varying","YES",25,NULL,4
+"nicer_but_slower_film_list","price","numeric","YES",NULL,4,5
+"nicer_but_slower_film_list","length","smallint","YES",NULL,16,6
+"nicer_but_slower_film_list","rating","USER-DEFINED","YES",NULL,NULL,7
+"nicer_but_slower_film_list","actors","text","YES",NULL,NULL,8
+"payment","payment_id","integer","NO",NULL,32,1
+"payment","customer_id","smallint","NO",NULL,16,2
+"payment","staff_id","smallint","NO",NULL,16,3
+"payment","rental_id","integer","NO",NULL,32,4
+"payment","amount","numeric","NO",NULL,5,5
+"payment","payment_date","timestamp without time zone","NO",NULL,NULL,6
+"rental","rental_id","integer","NO",NULL,32,1
+"rental","rental_date","timestamp without time zone","NO",NULL,NULL,2
+"rental","inventory_id","integer","NO",NULL,32,3
+"rental","customer_id","smallint","NO",NULL,16,4
+"rental","return_date","timestamp without time zone","YES",NULL,NULL,5
+"rental","staff_id","smallint","NO",NULL,16,6
+"rental","last_update","timestamp without time zone","NO",NULL,NULL,7
+"sales_by_film_category","category","character varying","YES",25,NULL,1
+"sales_by_film_category","total_sales","numeric","YES",NULL,NULL,2
+"sales_by_store","store","text","YES",NULL,NULL,1
+"sales_by_store","manager","text","YES",NULL,NULL,2
+"sales_by_store","total_sales","numeric","YES",NULL,NULL,3
+"staff","staff_id","integer","NO",NULL,32,1
+"staff","first_name","character varying","NO",45,NULL,2
+"staff","last_name","character varying","NO",45,NULL,3
+"staff","address_id","smallint","NO",NULL,16,4
+"staff","email","character varying","YES",50,NULL,5
+"staff","store_id","smallint","NO",NULL,16,6
+"staff","active","boolean","NO",NULL,NULL,7
+"staff","username","character varying","NO",16,NULL,8
+"staff","password","character varying","YES",40,NULL,9
+"staff","last_update","timestamp without time zone","NO",NULL,NULL,10
+"staff","picture","bytea","YES",NULL,NULL,11
+"staff_list","id","integer","YES",NULL,32,1
+"staff_list","name","text","YES",NULL,NULL,2
+"staff_list","address","character varying","YES",50,NULL,3
+"staff_list","zip code","character varying","YES",10,NULL,4
+"staff_list","phone","character varying","YES",20,NULL,5
+"staff_list","city","character varying","YES",50,NULL,6
+"staff_list","country","character varying","YES",50,NULL,7
+"staff_list","sid","smallint","YES",NULL,16,8
+"store","store_id","integer","NO",NULL,32,1
+"store","manager_staff_id","smallint","NO",NULL,16,2
+"store","address_id","smallint","NO",NULL,16,3
+"store","last_update","timestamp without time zone","NO",NULL,NULL,4
