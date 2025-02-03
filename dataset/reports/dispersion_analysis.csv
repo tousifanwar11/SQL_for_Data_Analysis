@@ -1,0 +1,4 @@
+"metric","range","standard_deviation","variance","interquartile_range"
+"Payment Amount","11.99","2.3689455309942720","5.6119029288177335","2"
+"Rental Duration","4","1.4116542663725307","1.9927677677677678","2"
+"Rental Rate","4.00","1.6463932126350043","2.7106106106106106","4"
